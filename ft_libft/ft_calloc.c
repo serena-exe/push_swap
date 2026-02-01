@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sebavaro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 12:56:53 by sebavaro          #+#    #+#             */
-/*   Updated: 2025/10/20 12:04:17 by sebavaro         ###   ########.fr       */
+/*   Updated: 2026/02/01 11:58:26 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t			i;
 	unsigned char	*tmp;
 
-	i = 0;
 	if (nmemb == 0 || size == 0)
 	{
 		tmp = malloc(0);
