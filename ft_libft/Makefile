@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tsoloher <tsoloher@student.42.fr>          +#+  +:+       +#+         #
+#    By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:49:47 by sebavaro          #+#    #+#              #
-#    Updated: 2025/11/03 18:10:01 by tsoloher         ###   ########.fr        #
+#    Updated: 2026/02/01 11:57:37 by sebavaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ CFILES = ft_isalpha.c\
 	 ft_putstr_fd.c\
 	 ft_putendl_fd.c\
 	 ft_putnbr_fd.c\
+	 ft_atol.c
 
 CBONUS = ft_lstnew_bonus.c\
 	ft_lstadd_front_bonus.c\
