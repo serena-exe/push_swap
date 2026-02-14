@@ -1,12 +1,12 @@
-// /* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.c                                            :+:      :+:    :+:   */
+/*   to_stack.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/26 13:15:54 by sebavaro          #+#    #+#             */
-/*   Updated: 2026/01/31 15:57:48 by sebavaro         ###   ########.fr       */
+/*   Created: 2026/02/11 13:47:46 by sebavaro          #+#    #+#             */
+/*   Updated: 2026/02/11 13:47:59 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,6 @@ int check_number(char *str)
     return (0);
 }
 
-void free_list(t_stack **stack)
-{
-    t_stack  *tmp;
-    t_stack  *current;
-    
-    if (!stack || !*stack)
-    return ;
-    current = *stack;
-    while (current)
-    {
-        tmp = current->next;
-        current->content = 0;
-        free(current);
-        current = tmp;
-    }
-    *stack = NULL;
-}
-
 void	error_handler(t_stack **a, char **av)
 {
     (void)av;
@@ -73,19 +55,15 @@ int    twice(t_stack *stack, int num)
     return (0);
 }
 
-void ft_freeMatrix(char **matrix)
+int is_sorted(t_stack *stack)
 {
-    int i;
-
-    i = 0;
-    if (!matrix)
-        return ;
-    while (matrix[i])
+    while (stack && stack->next)
     {
-        free(matrix[i]);
-        i++;
+        if (stack->content > stack->next->content)
+            return (0);
+        stack = stack->next;
     }
-    free(matrix);
+    return (1);
 }
 
 void create_stacks(t_stack **a, char **av)
@@ -114,7 +92,7 @@ void create_stacks(t_stack **a, char **av)
             append_to_stack(a, (int)num);
             j++;
         }
-        ft_freeMatrix(split_av);
+        freeMatrix(split_av);
         i++;
     }
 }

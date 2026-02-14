@@ -6,7 +6,7 @@
 #    By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/26 10:35:19 by sebavaro          #+#    #+#              #
-#    Updated: 2026/01/31 16:13:32 by sebavaro         ###   ########.fr        #
+#    Updated: 2026/02/11 14:49:11 by sebavaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,13 @@ NAME = push_swap
 LIBFT_DIR = ft_libft
 
 CFILES = main.c \
-		 stack.c \
+		 to_stack.c \
 		 utils.c \
+		 to_free.c \
+		 to_index.c \
+		 to_sort.c \
+		 mouv.c \
+		 min_n_max.c \
 
 OBJS = $(CFILES:.c=.o)
 

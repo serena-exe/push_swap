@@ -6,7 +6,7 @@
 /*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 10:33:57 by sebavaro          #+#    #+#             */
-/*   Updated: 2026/01/31 16:46:09 by sebavaro         ###   ########.fr       */
+/*   Updated: 2026/02/11 13:42:19 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,25 @@ int main(int ac, char **av)
         return (1); //error in english
     create_stacks(&a, av);
     
-    //print stack a for debug
-    t_stack *tmp = a;
-    while (tmp)
-    {
-        printf("%d\n", tmp->content);
-        tmp = tmp->next;
-    }
+    // //print stack a for debug
+    // t_stack *tmp = a;
+    // while (tmp)
+    // {
+    //     printf("%d\n", tmp->content);
+    //     tmp = tmp->next;
+    // }
     
+    if (ft_lstsize_stack(a) == 1 || is_sorted(a) == 1)
+    {
+        free_list(&a);
+        printf("Already sorted\n");
+        return (0);
+    }
+    else
+    {
+        sort_stack(&a, &b);
+    }
+    free_list(&a);
     return (0);
 }
 
