@@ -6,7 +6,7 @@
 /*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 14:17:32 by sebavaro          #+#    #+#             */
-/*   Updated: 2026/02/14 17:57:21 by sebavaro         ###   ########.fr       */
+/*   Updated: 2026/02/14 18:44:25 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void swap(t_stack **stack, char ab)
     second = (*stack)->next;
     first->next = second->next;
     second->next = first;
+    *stack = second;
     if (ab == 'a')
         write(1, "sa\n", 3);
     else if (ab == 'b')
