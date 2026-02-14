@@ -6,7 +6,7 @@
 /*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 13:47:46 by sebavaro          #+#    #+#             */
-/*   Updated: 2026/02/11 13:47:59 by sebavaro         ###   ########.fr       */
+/*   Updated: 2026/02/14 18:22:49 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int check_number(char *str)
 
 void	error_handler(t_stack **a, char **av)
 {
-    (void)av;
+    freeMatrix(av);
     free_list(a);
 	write(2, "Error\n", 6);
 	exit(2);
@@ -78,17 +78,17 @@ void create_stacks(t_stack **a, char **av)
     {
         split_av = ft_split(av[i], ' ');
         if (!split_av)
-            error_handler(a, av);
+            error_handler(a, split_av);
         j = 0;
         while (split_av[j])
         {
             if(check_number(split_av[j]))
-                error_handler(a, av);
+                error_handler(a, split_av);
             num = ft_atol(split_av[j]);
             if (num < INT_MIN || num > INT_MAX)
-                error_handler(a, av);
+                error_handler(a, split_av);
             if (twice(*a, (int)num))
-                error_handler(a, av);
+                error_handler(a, split_av);
             append_to_stack(a, (int)num);
             j++;
         }
