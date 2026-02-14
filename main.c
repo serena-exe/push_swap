@@ -6,18 +6,12 @@
 /*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 10:33:57 by sebavaro          #+#    #+#             */
-/*   Updated: 2026/02/11 13:42:19 by sebavaro         ###   ########.fr       */
+/*   Updated: 2026/02/14 18:00:00 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
-
-static int  print_error(void)
-{
-    write(2, "Error\n", 6);
-    return (1);
-}
 
 int main(int ac, char **av)
 {
