@@ -6,7 +6,7 @@
 #    By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/26 10:35:19 by sebavaro          #+#    #+#              #
-#    Updated: 2026/02/14 17:55:18 by sebavaro         ###   ########.fr        #
+#    Updated: 2026/02/14 18:45:55 by sebavaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ OBJS = $(CFILES:.c=.o)
 
 CC = clang
 
-CFLAGS = -g -Wall -Wextra -Werror
+CFLAGS = -gdwarf-2 -Wall -Wextra -Werror
 LIBFT = $(LIBFT_DIR)/libft.a
 
 all : $(NAME)
