@@ -6,7 +6,7 @@
 /*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 14:10:23 by sebavaro          #+#    #+#             */
-/*   Updated: 2026/02/11 14:41:20 by sebavaro         ###   ########.fr       */
+/*   Updated: 2026/02/14 18:05:53 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,11 @@ int	ft_lstsize_stack(t_stack *lst)
 
 void	ft_lstdelone_stack(t_stack *lst, void (*del)(void *))
 {
+    (void)del;
 	if (!lst)
 		return ;
-	if (del)
-		del((void *)(lst->content));
+	// if (del)
+	// 	del((void *)(lst->content));
 	free(lst);
 }
 

@@ -6,7 +6,7 @@
 /*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 13:42:41 by sebavaro          #+#    #+#             */
-/*   Updated: 2026/02/11 14:58:25 by sebavaro         ###   ########.fr       */
+/*   Updated: 2026/02/14 18:04:28 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,21 +46,21 @@ void sort_three(t_stack **a)
 {
     if (find_min(*a) == (*a)->content)
     {
-        reverse_rotate(a, "a");
-        swap(a, "a");
+        reverse_rotate(a, 'a');
+        swap(a, 'a');
     }
     else if (find_max(*a) == (*a)->content)
     {
-        rotate(a, "a");
+        rotate(a, 'a');
         if (!is_sorted(*a))
-            swap(a, "a");
+            swap(a, 'a');
     }
     else
     {
         if (find_index(*a, find_max(*a)) == 1)
-            reverse_rotate(a, "a");
+            reverse_rotate(a, 'a');
         else
-            swap(a, "a");
+            swap(a, 'a');
     }
     
 }
@@ -75,7 +75,7 @@ void sort_small(t_stack **a, t_stack **b)
     if (size == 2)
     {
         if ((*a)->content > (*a)->next->content)
-            swap(a, "a");
+            swap(a, 'a');
     }
     else if (size == 3)
         sort_three(a);
