@@ -6,7 +6,7 @@
 /*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 13:42:41 by sebavaro          #+#    #+#             */
-/*   Updated: 2026/02/14 18:04:28 by sebavaro         ###   ########.fr       */
+/*   Updated: 2026/02/14 18:24:42 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void sort_small(t_stack **a, t_stack **b)
 {
     int size;
 
+    (void)b;
     size = ft_lstsize_stack(*a);
     if (size == 2)
     {
