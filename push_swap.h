@@ -6,7 +6,7 @@
 /*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 10:37:43 by sebavaro          #+#    #+#             */
-/*   Updated: 2026/02/11 14:48:33 by sebavaro         ###   ########.fr       */
+/*   Updated: 2026/02/14 17:58:34 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ void sort_small(t_stack **a, t_stack **b);
 void buterfly_sort(t_stack **a, t_stack **b);
 void ft_lstdelone_stack(t_stack *lst, void (*del)(void*));
 void ft_lstclear_stack(t_stack **lst, void (*del)(void *));
-void swap(t_stack **stack, char *ab);
+void swap(t_stack **stack, char ab);
 int find_min(t_stack *stack);
 int find_max(t_stack *stack);
-void rotate(t_stack **stack, char *ab);
-void reverse_rotate(t_stack **stack, char *ab);
+void rotate(t_stack **stack, char ab);
+void reverse_rotate(t_stack **stack, char ab);
 t_stack *ft_lstlast_stack(t_stack *lst);
 int find_index(t_stack *stack, int num);
 
