@@ -6,13 +6,13 @@
 /*   By: sebavaro <sebavaro@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 14:17:32 by sebavaro          #+#    #+#             */
-/*   Updated: 2026/02/14 17:55:07 by sebavaro         ###   ########.fr       */
+/*   Updated: 2026/02/14 17:57:21 by sebavaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void swap(t_stack **stack, char *ab)
+void swap(t_stack **stack, char ab)
 {
     t_stack *first;
     t_stack *second;
@@ -29,7 +29,7 @@ void swap(t_stack **stack, char *ab)
         write(1, "sb\n", 3);
 }
 
-void reverse_rotate(t_stack **stack, char *ab)
+void reverse_rotate(t_stack **stack, char ab)
 {
     t_stack *last;
     t_stack *last_last;
@@ -49,7 +49,7 @@ void reverse_rotate(t_stack **stack, char *ab)
         write(1, "rrb\n", 4);
 }
 
-void rotate(t_stack **stack, char *ab)
+void rotate(t_stack **stack, char ab)
 {
     t_stack *first;
     t_stack *last;
@@ -69,7 +69,7 @@ void rotate(t_stack **stack, char *ab)
         write(1, "rb\n", 3);
 }
 
-void push(t_stack **from, t_stack **to, char *ab)
+void push(t_stack **from, t_stack **to, char ab)
 {
     t_stack *tmp;
 
